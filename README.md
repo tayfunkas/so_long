@@ -4,7 +4,7 @@ so_long is a simple 2D game project developed as part of the 42 programming scho
 
 ## Key Learnings
 - Custom map parsing from .ber files
-- Player movement using W, A, S, D keys
+- Player movement using different keys
 - Collectible items and exit point
 - Simple graphics using sprites and textures
 - Move counter displayed in the shell
@@ -23,4 +23,6 @@ so_long is a simple 2D game project developed as part of the 42 programming scho
 3. Use arrow keys to move the player.
 4. Collect all the seaweed to revive the green fish.
 5. Reach the green fish and win the game.
-6. Quit by ESC or 'x'. 
+6. Quit by ESC or 'x'.
+
+https://github.com/user-attachments/assets/9278abdd-078d-4940-bb8a-d8ad0c1d8984
