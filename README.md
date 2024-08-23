@@ -25,4 +25,5 @@ so_long is a simple 2D game project developed as part of the 42 programming scho
 5. Reach the green fish and win the game.
 6. Quit by ESC or 'x'.
 
-https://github.com/user-attachments/assets/9278abdd-078d-4940-bb8a-d8ad0c1d8984
+https://github.com/user-attachments/assets/267d8960-21a7-46c3-aed7-ec88e94d4bc9
+
