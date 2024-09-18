@@ -19,6 +19,7 @@ so_long is a simple 2D game project developed as part of the 42 programming scho
 
 ## Usage
 1. Compile the project with `make` command.
+  If you come across a problem about permissions, go into mlx folder and update permissions by `chmod +x configure` and go back into the so_long folder and repeat `make`. 
 2. Run the game `./so_long maps/map.ber` or try other maps like map2,3,4,5, mapcomplex, mapmore, maplarge. 
 3. Use arrow keys to move the player.
 4. Collect all the seaweed to revive the green fish.
