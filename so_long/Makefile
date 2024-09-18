@@ -12,18 +12,15 @@ SOURCES = sources/checks.c \
 	sources/move.c \
 	sources/so_long.c \
 	sources/get_next_line.c \
-	sources/get_next_line_utils.c 
+	sources/get_next_line_utils.c \
+	sources/helpers.c 
 
 OBJECTS = $(SOURCES:.c=.o)
 
-INCLUDES = -I./mlx -I../Libft -I../printf
+INCLUDES = -I./mlx
 
-LIBFT_DIR = /home/tkasapog/Desktop/Curriculum/Libft
-PRINTF_DIR = /home/tkasapog/Desktop/Curriculum/ft_printf
 MLX_DIR = ./mlx
 
-LIBFT = $(LIBFT_DIR)/libft.a
-PRINTF = $(PRINTF_DIR)/libftprintf.a
 MLX_LIB = $(MLX_DIR)/libmlx.a
 
 MLX = -L$(MLX_DIR) -lmlx -lXext -lX11  # For Linux
@@ -31,14 +28,8 @@ MLX = -L$(MLX_DIR) -lmlx -lXext -lX11  # For Linux
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS) $(LIBFT) $(PRINTF) $(MLX_LIB)
-	$(CC) $(CFLAGS) $(OBJECTS) $(LIBFT) $(PRINTF) $(MLX) -o $(NAME)
-
-$(LIBFT):
-	make -C $(LIBFT_DIR)
-
-$(PRINTF):
-	make -C $(PRINTF_DIR)
+$(NAME): $(OBJECTS) $(MLX_LIB)
+	$(CC) $(CFLAGS) $(OBJECTS) $(MLX) -o $(NAME)
 
 $(MLX_LIB):
 	make -C $(MLX_DIR)
@@ -48,14 +39,10 @@ $(MLX_LIB):
 
 clean:
 	$(RM) $(OBJECTS)
-	make -C $(LIBFT_DIR) clean
-	make -C $(PRINTF_DIR) clean
 	make -C $(MLX_DIR) clean
 
 fclean: clean
 	$(RM) $(NAME)
-	make -C $(LIBFT_DIR) fclean
-	make -C $(PRINTF_DIR) fclean
 	make -C $(MLX_DIR) clean
 
 re: fclean all
